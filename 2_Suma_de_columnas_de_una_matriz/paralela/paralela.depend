@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1589733607 source:c:\users\erikapc\documents\cursos2020-1\grafica\paralela\main.cpp
+	<iostream>
+	<ctime>
+	<thread>
+	<mutex>
+
