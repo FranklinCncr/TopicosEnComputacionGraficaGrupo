@@ -16,8 +16,17 @@ def rgb2gray(rgb):
 
     r, g, b = rgb[:,:,0], rgb[:,:,1], rgb[:,:,2]
     gray = 0.2989 * r + 0.5870 * g + 0.1140 * b
-
     return gray
+
+def adjust_gamma(image, gamma=1.0):
+	# build a lookup table mapping the pixel values [0, 255] to
+	# their adjusted gamma values
+	invGamma = 1.0 / gamma
+	table = np.array([((i / 255.0) ** invGamma) * 255
+		for i in np.arange(0, 256)]).astype("uint8")
+	# apply gamma correction using the lookup table
+	return cv.LUT(image, table)
+
 #############ROI######
 '''roi2=  img[200:500, 200:550] #img[y0:y1, x0:x1]
 #print(roi1)
@@ -82,7 +91,7 @@ plt.show()'''
 
 
 #######################histograma##############
-img = cv.imread('a1.jpg');
+img = cv.imread('a2.jpg');
 
 '''
 hist =cv.calcHist([img], canales, None,bins,[0, 256])
@@ -99,7 +108,7 @@ for i, c in enumerate(color):
 plt.show()
 '''
 
-
+'''
 print(img[1])
 ##R=2	G =1 B=0
 hist = cv.calcHist([img], [2, 1], None, [64,64],[0, 256, 0, 256])
@@ -125,15 +134,16 @@ cv.namedWindow("Histograma R-G", 0);
 
 pinta = cv.UMat(np.array(pinta, dtype=np.uint8))
 
-cv.imwrite("Histograma R-G.jpg", pinta);
+cv.imwrite("Histograma R-G.jpg", pinta);'''
 '''
 img = cv.imread('a1.jpg');
 img = np.float32(img) #img.convertTo(im32F, CV_32F, 1.0/255.0);
 img = img*1.0/255.0
 pow(img, ui->doubleSpinBox->value(), im32F);
-im32F.convertTo(img, CV_8U, 255);
-'''
-
+im32F.convertTo(img, CV_8U, 255);'''
+imagenes=np.array(255*(img/255)**0.2,dtype='uint8')
+cv.imshow("Gama ",imagenes)
+cv.imshow("Imagen real ",img)
 '''
 img = cv.imread('equalizar.PNG');
 cv.imshow("real ",img)
@@ -142,6 +152,9 @@ img_to_yuv[:,:,0] = cv.equalizeHist(img_to_yuv[:,:,0])
 hist_equalization_result = cv.cvtColor(img_to_yuv, cv.COLOR_YUV2BGR)
 cv.imshow("equalizacion ",hist_equalization_result)
 cv.imwrite("equalizacion.jpg",hist_equalization_result)'''
+
+
+
 k = cv.waitKey(0)
 if k == ord("s"):
     cv.imwrite("starry_night.png", img)
