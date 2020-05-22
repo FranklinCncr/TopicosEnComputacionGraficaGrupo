@@ -9,7 +9,7 @@ int main(){
     Mat B= imread("img2.jpg", 1);
     Mat res;
    
-    addWeighted(A,0.3, B,0.7, 0, res);
+    addWeighted(A,0.7, B,0.3, 0, res);
     imshow("Suma ponderada", res);
     waitKey(0);
 

@@ -20,7 +20,9 @@ int main(){
     for (int r= 0; r<64; r++)
         for (int g= 0; g<64; g++)
             pinta.at<uchar>(r, g)= 255-255*hist.at<float>(r, g)/maxval;
+            
     namedWindow("Histograma R-G", 0);
+    imshow("Entrada", img);
     imshow("Histograma R-G", pinta);
             
     waitKey(0); // Wait for any keystroke in one of the windows

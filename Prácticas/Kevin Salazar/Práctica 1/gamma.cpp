@@ -10,7 +10,7 @@ int main(){
     
     Mat im32F;
     img.convertTo(im32F, CV_32F, 1.0/255.0);
-    pow(im32F, 0.25, im32F);
+    pow(im32F, 0.85, im32F);
     im32F.convertTo(img, CV_8U, 255);
     
     imshow("Gamma", im32F);    

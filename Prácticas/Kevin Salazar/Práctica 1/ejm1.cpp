@@ -30,7 +30,8 @@ int main(){
                        Scalar( 255, 0, 0), 2, 8, 0  );
     }
 
-    namedWindow( "Histograma", 1 );    imshow( "Histograma", histImage );
+    imshow("Entrada", img);
+    imshow( "Histograma", histImage );
     waitKey(0);    
 
             
