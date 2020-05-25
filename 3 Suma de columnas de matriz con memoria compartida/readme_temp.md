@@ -24,6 +24,6 @@ En la imagen previa se muestra que en los bloques existe una distribución bidim
 
 ![](https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/3%20Suma%20de%20columnas%20de%20matriz%20con%20memoria%20compartida/capturas/im4.png)
 
-Ahora, notemos que en la dimensión x del grid cada identificador representa el bloque que se encargará de procesar más de una columna.
+Ahora, notemos que en la dimensión x del grid cada identificador representa el bloque que se encargará de procesar más de una columna. Pues cada bloque procesa la cantidad de "chunk" columnas.
 
 
