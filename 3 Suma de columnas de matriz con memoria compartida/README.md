@@ -24,8 +24,10 @@ Ahora, notemos que en la dimensión x del grid cada identificador representa el 
 
 En el código del kernel existe la variable Nds, este es es el arreglo compartido que va recogiendo los resultados de las hebras para luego sincronizarlas el bloque, esto como paso previo a la recopilación de resultados que hace el primer hilo del bloque.
 
-Al utilizar la memoria compartida permite a todos los hilos del bloque acceder a datos de la memoria compartida. Asi los hilos cooperan compartiendo sus datos. Ocasionando ejecuciones más rápidas. Ademas es más rápido el acceso a la memoria compartida que a la memoria global.
+Al utilizar la **memoria compartida** permite a todos los hilos del bloque acceder a datos de la memoria compartida. Asi los hilos cooperan compartiendo sus datos. Ocasionando ejecuciones más rápidas. Ademas es más rápido el acceso a la memoria compartida que a la memoria global.
+
 ![](https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/3%20Suma%20de%20columnas%20de%20matriz%20con%20memoria%20compartida/capturas/memoria_cmpa.png)
+
 Tambien los datos la memoria compartida solo se conservan cuando se ejecuta el kernel. Cuando el kernel concluye, el contenido de la memoria compartida desaparece  la memoria. Por otro lado la memoria compartida limita la cantidad de hilos por bloque.
 
 
