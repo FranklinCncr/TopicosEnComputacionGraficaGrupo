@@ -8,4 +8,4 @@
 
 Se considera memoria compartida en la presente suma de columnas de una matriz de 1024 filas y 512 columnas.
 
-Para ello hay que tener en consideración el siguiente esquema que indica que la forma en la que una matriz está alojada en la memoria host es diferente a como se guarda en la memoria global del device. Es decir, 
+Para ello hay que tener en consideración el siguiente esquema que indica que la forma en la que una matriz está alojada en la memoria host es diferente a como se guarda en la memoria global del device. Es decir, si por el host se considera la matriz vista en una dimensión se alineará considerando las filas completas, pero si la vemos desde el device se alineará por columnas.
