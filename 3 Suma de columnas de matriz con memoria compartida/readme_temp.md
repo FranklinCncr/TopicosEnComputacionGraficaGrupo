@@ -15,3 +15,7 @@ Para ello hay que tener en consideración el siguiente esquema que indica que la
 Para mostrar la organización de las dimensiones en el device consideramos el siguiente gráfico:
 
 ![](https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/3%20Suma%20de%20columnas%20de%20matriz%20con%20memoria%20compartida/capturas/im2.png)
+
+Habiendo visto esta parte inicial podemos mostrar cómo se han considerado las dimensiones tanto del grid como de los bloques:
+
+![](https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/3%20Suma%20de%20columnas%20de%20matriz%20con%20memoria%20compartida/capturas/im3.png)
