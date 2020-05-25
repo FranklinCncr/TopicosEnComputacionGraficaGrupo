@@ -1,8 +1,11 @@
 # Resultados
 ![](https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/3%20Suma%20de%20columnas%20de%20matriz%20con%20memoria%20compartida/capturas/cg1.png)
-(https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/3%20Suma%20de%20columnas%20de%20matriz%20con%20memoria%20compartida/capturas/cg2.png)
+![](https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/3%20Suma%20de%20columnas%20de%20matriz%20con%20memoria%20compartida/capturas/cg2.png)
 
 # ---------------------------------------------------------------------------------
 
 # Explicaciones
 
+Se considera memoria compartida en la presente suma de columnas de una matriz de 1024 filas y 512 columnas.
+
+Para ello hay que tener en consideración el siguiente esquema que indica que la forma en la que una matriz está alojada en la memoria host es diferente a como se guarda en la memoria global del device. Es decir, 
