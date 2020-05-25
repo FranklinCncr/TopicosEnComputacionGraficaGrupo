@@ -6,28 +6,25 @@
 #define DIMBLOCKX 32
 
 __global__ void SumaColMatrizKernel (int M, int N, float *Md, float *Nd){
-  __shared__ float Nds[DIMBLOCKX];
-  float Pvalue = 0;
-  int columna = blockIdx.x * (N/gridDim.x) + threadIdx.y;
-  int pasos = M/blockDim.x;
-  int posIni = columna * M + threadIdx.x * pasos;
-
-  for (int k=0; k<pasos; k++){
-      Pvalue += Md[posIni + k];
-  }
-
-  atomicAdd(&Nds[threadIdx.x],Pvalue);
-  
-  __syncthreads();
-
-  if (threadIdx.x == 0){
-      for (int i=1; i<blockDim.x; i++){
-          Nds[0] += Nds[i];
+    // Pvalue es usado para el valor intermedio
+    __shared__ float Nds[DIMBLOCKX];
+    float Pvalue = 0;
+    int columna = blockIdx.y*(N/gridDim.x)+threadIdx.x;
+    int pasos = M/blockDim.x ;
+    int posIni = columna * M + threadIdx.x * pasos;
+    for (int k = 0; k < pasos; ++k) {
+      Pvalue = Pvalue + Md[posIni + k];
+    }
+    Nds[threadIdx.x] = Pvalue;
+    __syncthreads();
+    if (threadIdx.x == 0 ){
+      for (int i = 1; i < blockDim.x; ++i) {
+      Nds[0] = Nds[0]+Nds[i];
       }
-      atomicAdd(&Nd[threadIdx.x],Nds[0]);
-  }
-  
-  
+      
+      Nd[columna*gridDim.x+blockIdx.x] = Nds[0];
+      
+    }
 }  
 
 void SumaColMatriz (int M, int N, float *Mh, float *Nh){
@@ -45,7 +42,8 @@ void SumaColMatriz (int M, int N, float *Mh, float *Nh){
   dim3 tamGrid(N/chunk, 1);
   dim3 tamBlock(M/chunk, chunk, 1);
   SumaColMatrizKernel<<<tamGrid, tamBlock>>> (M, N, Md, Nd);
-
+   ////Resultado
+  ///1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 1024 0 0 0 0 0 0 0 0 0 0 0 0 ....
   cudaMemcpy(Nh,Nd, size2, cudaMemcpyDeviceToHost);
 
   cudaFree(Md); cudaFree(Nd);
