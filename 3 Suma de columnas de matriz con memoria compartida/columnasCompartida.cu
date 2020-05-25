@@ -7,7 +7,7 @@
 __global__ void SumaColMatrizKernel (int M, int N, float *Md, float *Nd){
   __shared__ float Nds[DIMBLOCKX];
   float Pvalue = 0;
-  int columna = blockIdx.x * (N/gridDim.x) + threadIdx.y;
+  int columna = blockIdx.x * (N/gridDim.x) + threadIdx.x;
   int pasos = M/blockDim.x;
   int posIni = columna * M + threadIdx.y * pasos;
 
