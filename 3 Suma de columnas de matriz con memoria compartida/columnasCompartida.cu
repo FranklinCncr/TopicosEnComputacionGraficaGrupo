@@ -7,9 +7,9 @@
 __global__ void SumaColMatrizKernel (int M, int N, float *Md, float *Nd){
   __shared__ float Nds[DIMBLOCKX];
   float Pvalue = 0;
-  int columna = blockIdx.x * (N/gridDim.x) + threadIdx.x;
+  int columna = blockIdx.x * (N/gridDim.x) + threadIdx.y;
   int pasos = M/blockDim.x;
-  int posIni = columna * M + threadIdx.x * pasos;
+  int posIni = columna * M + threadIdx.y * pasos;
 
   for (int k=0; k<pasos; k++){
       Pvalue += Md[posIni + k];
@@ -65,7 +65,7 @@ int main(){
   SumaColMatriz(M,N,Mh,Nh);
 
   for (int i=0; i<N; i++)
-    std::cout<<Nh[i]<<" ";
+  std::cout<<Nh[i]<<" ";
 
   return 0;
 }
