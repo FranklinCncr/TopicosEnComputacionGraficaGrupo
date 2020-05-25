@@ -22,4 +22,8 @@ Habiendo visto esta parte inicial podemos mostrar cómo se han considerado las d
 
 En la imagen previa se muestra que en los bloques existe una distribución bidimensional de los hilos, pues se hizo:
 
+![](https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/3%20Suma%20de%20columnas%20de%20matriz%20con%20memoria%20compartida/capturas/im4.png)
+
+Ahora, notemos que en la dimensión x del grid cada identificador representa el bloque que se encargará de procesar más de una columna.
+
 
