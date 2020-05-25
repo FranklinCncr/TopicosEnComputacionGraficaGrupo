@@ -19,3 +19,7 @@ Para mostrar la organización de las dimensiones en el device consideramos el si
 Habiendo visto esta parte inicial podemos mostrar cómo se han considerado las dimensiones tanto del grid como de los bloques:
 
 ![](https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/3%20Suma%20de%20columnas%20de%20matriz%20con%20memoria%20compartida/capturas/im3.png)
+
+En la imagen previa se muestra que en los bloques existe una distribución bidimensional de los hilos, pues se hizo:
+
+
