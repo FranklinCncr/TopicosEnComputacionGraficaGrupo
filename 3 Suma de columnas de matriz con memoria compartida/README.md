@@ -26,6 +26,10 @@ En la imagen previa se muestra que en los bloques existe una distribución bidim
 
 Ahora, notemos que en la dimensión x del grid cada identificador representa el bloque que se encargará de procesar más de una columna. Pues cada bloque procesa la cantidad de "chunk" columnas.
 
+![](https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/3%20Suma%20de%20columnas%20de%20matriz%20con%20memoria%20compartida/capturas/im5.png)
+
+En la imagen previa notamos que Nds es el arreglo compartido que va recogiendo los resultados de las hebras
+
 También se considera la sincronización de las hebras en el bloque como paso previo a la recopilación de resultados que hace el primer hilo del bloque.
 
 
