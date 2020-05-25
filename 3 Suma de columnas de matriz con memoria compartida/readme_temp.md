@@ -26,4 +26,6 @@ En la imagen previa se muestra que en los bloques existe una distribución bidim
 
 Ahora, notemos que en la dimensión x del grid cada identificador representa el bloque que se encargará de procesar más de una columna. Pues cada bloque procesa la cantidad de "chunk" columnas.
 
+También se considera la sincronización de las hebras en el bloque como paso previo a la recopilación de resultados que hace el primer hilo del bloque.
+
 
