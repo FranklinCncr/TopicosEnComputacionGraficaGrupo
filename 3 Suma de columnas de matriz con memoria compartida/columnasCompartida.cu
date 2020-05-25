@@ -1,3 +1,4 @@
+%%cu
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
 #include <bits/stdc++.h>
@@ -7,15 +8,15 @@
 __global__ void SumaColMatrizKernel (int M, int N, float *Md, float *Nd){
   __shared__ float Nds[DIMBLOCKX];
   float Pvalue = 0;
-  int columna = blockIdx.x * (N/gridDim.x) + threadIdx.x;
+  int columna = blockIdx.x * (N/gridDim.x) + threadIdx.y;
   int pasos = M/blockDim.x;
-  int posIni = columna * M + threadIdx.y * pasos;
+  int posIni = columna * M + threadIdx.x * pasos;
 
   for (int k=0; k<pasos; k++){
       Pvalue += Md[posIni + k];
   }
 
-  atomicAdd(&Nd[columna],Pvalue);
+  atomicAdd(&Nds[threadIdx.x],Pvalue);
   
   __syncthreads();
 
@@ -23,7 +24,7 @@ __global__ void SumaColMatrizKernel (int M, int N, float *Md, float *Nd){
       for (int i=1; i<blockDim.x; i++){
           Nds[0] += Nds[i];
       }
-      atomicAdd(&Nd[blockIdx.x],Nds[0]);
+      atomicAdd(&Nd[threadIdx.x],Nds[0]);
   }
   
   
