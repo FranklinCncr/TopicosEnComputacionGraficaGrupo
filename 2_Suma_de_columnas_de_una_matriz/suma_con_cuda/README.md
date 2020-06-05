@@ -2,9 +2,9 @@ Estudiante: Franklin Canaza
 
 Suma de los elementos de una matriz simple:
 
-                           {{4,  2,  3,  1,  5, 6, 8, 1, 6, 4},
+                        {{4,  2,  3,  1,  5, 6, 8, 1, 6, 4},
 
-                            {2,  2,  3,  4,  7, 10, 5, 8, 6, 3},
+                        {2,  2,  3,  4,  7, 10, 5, 8, 6, 3},
 
                         {4,  8,  1,  2,  5, 6, 10, 9, 6, 8},
                               
