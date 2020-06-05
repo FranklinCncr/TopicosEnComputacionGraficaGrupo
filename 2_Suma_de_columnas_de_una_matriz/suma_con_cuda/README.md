@@ -1,5 +1,13 @@
 Estudiante: Franklin Canaza
 
+Pasando datos de la matriz de host a device y de device a host:
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
 Suma de los elementos de una matriz simple:
 
                         {{4,  2,  3,  1,  5, 6, 8, 1, 6, 4},
