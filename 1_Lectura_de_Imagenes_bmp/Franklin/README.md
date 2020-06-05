@@ -1,4 +1,4 @@
-Conversion de una imagen de 60 x 60 pixeles a caracteres tomando en cuenta el color, donde:
+Lectura y conversion de una imagen de 60 x 60 pixeles a caracteres tomando en cuenta el color, donde:
 
 Rojo=r 
 
