@@ -24,6 +24,19 @@ void sum Cuda(int* r, const int* m, int size) {
 }
 ```
 
+Realizando la operación en Kernel:
+
+```c
+__global__ void addKernel(int* c, const int* a, const int* b, int size) {
+    int i = blockIdx.x * blockDim.x + threadIdx.x;
+    if (i < size) {
+    	for(int j=0;j<10;j=j+1){
+            r[i]=r[i]+m[j][i];
+        }
+    }
+}
+````
+
 Suma de los elementos de una matriz simple:
 
                         {{4,  2,  3,  1,  5, 6, 8, 1, 6, 4},
