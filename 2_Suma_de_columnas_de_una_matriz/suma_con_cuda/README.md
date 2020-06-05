@@ -2,10 +2,26 @@ Estudiante: Franklin Canaza
 
 Pasando datos de la matriz de host a device y de device a host:
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+```c
+void sum Cuda(int* r, const int* m, int size) {
+    int* dev_m = nullptr;
+    int* dev_r = nullptr;
+
+    cudaMalloc((void**)&dev_m, size * sizeof(int));
+    cudaMalloc((void**)&dev_r, size * sizeof(int));
+
+    cudaMemcpy(dev_m, m, size * sizeof(int), cudaMemcpyHostToDevice);
+    cudaMemcpy(dev_r, r, size * sizeof(int), cudaMemcpyHostToDevice);
+
+    addKernel<<<2, (size + 1) / 2>>>(dev_m, dev_r, size);
+    
+    cudaDeviceSynchronize();
+
+    cudaMemcpy(r, dev_r, size * sizeof(int), cudaMemcpyDeviceToHost);
+
+    cudaFree(dev_m);
+    cudaFree(dev_r);
+}
 ```
 
 Suma de los elementos de una matriz simple:
