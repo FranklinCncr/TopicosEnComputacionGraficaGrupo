@@ -6,7 +6,7 @@ En **colab.ipynb** se encuentra el código en python y cuda, con resultados de l
 
 En **lecturaDeImagen_Funcion.py** se muestra el código que lee la imagen y calcula la función de ecualización.
 
-En **ecualizacionCuda.cu** se equaliza la imagen, toma el archivo generado de la imagen en el código anterior anterior y el archivo de la función de ecualización.
+En **ecualizacionCuda.cu** se equaliza la imagen, toma los archivos de la imagen y de la función de ecualización generados con el cćodigo anterior.
 
 En **mostrarImage.py** se lee el resultado del código cuda y se muestra.
 
