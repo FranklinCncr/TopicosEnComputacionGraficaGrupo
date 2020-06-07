@@ -4,7 +4,7 @@ Calculo de operacion gama a una matriz de 10x10, con un valor gama=0.5
 
 **Captura de la ejecución del programa en colab**
 
-![](cubo.bmp)
+![](captura.jpg)
 
 **Link del codigo en colab**
 
