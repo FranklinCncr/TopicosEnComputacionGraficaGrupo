@@ -5,3 +5,9 @@
 	<thread>
 	<mutex>
 
+1591384539 source:c:\users\erikapc\documents\cursos2020-1\topicoscomputaciongrafica\grupografica\2_suma_de_columnas_de_una_matriz\paralela\main.cpp
+	<iostream>
+	<ctime>
+	<thread>
+	<mutex>
+

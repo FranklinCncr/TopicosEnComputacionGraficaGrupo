@@ -8,8 +8,8 @@ using namespace std;
 mutex g_pages_mutex;
 unsigned t0, t1;
 int i,j;
-int f=1048576;//1024
-int c=524288;//512;
+int f=1024;
+int c=512;
 int * lista=new int [c];
 int ** matriz=new int* [f];
 int pasos=0;
@@ -27,9 +27,9 @@ void inicio(){
         //cout<<"lista"<<lista[i]<<endl;
     }
     i=0;
-    while (i<f){
+    while (i<c){
         j=0;
-        while(j<c){
+        while(j<f){
             matriz[i][j]=1;
             j+=1;
         }

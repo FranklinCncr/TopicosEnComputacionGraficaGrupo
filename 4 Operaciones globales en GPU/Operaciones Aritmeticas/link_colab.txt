@@ -1,0 +1,5 @@
+*Suma de 2 matriz con opencv
+https://colab.research.google.com/drive/1Z2wNoO6rtSGv0ObOWTo4-2iNiajurbYZ?usp=sharing
+
+*Suma de 2 matriz  con memoria compartida
+https://colab.research.google.com/drive/1Nq-QFTJVur_Y0zs3bETmRhJpiYjH67rG?usp=sharing
