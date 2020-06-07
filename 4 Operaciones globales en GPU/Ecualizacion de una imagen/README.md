@@ -1,11 +1,11 @@
-# Kevin Salazar
+## Kevin Salazar
 
 # Operaciones globales en GPU
 # ---------------------------------------------------------------------------------
 - **Ecualización de una imagen**
-![](https://github.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/raw/master/Pr%C3%A1cticas/Kevin%20Salazar/Pr%C3%A1ctica%201/capturas/histG.png)
+![](https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/4%20Operaciones%20globales%20en%20GPU/Ecualizacion%20de%20una%20imagen/resultados/img.jpg)
 
-![](https://github.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/raw/master/Pr%C3%A1cticas/Kevin%20Salazar/Pr%C3%A1ctica%201/capturas/histG.png)
+![](https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/4%20Operaciones%20globales%20en%20GPU/Ecualizacion%20de%20una%20imagen/resultados/imgEcualizada.jpg)
 
 # ---------------------------------------------------------------------------------
 
