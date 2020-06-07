@@ -14,16 +14,6 @@ for i in range(1,255):
   acumulado += histograma[i]
 funcion[255] = 255
 
-'''
-#probando si funciona
-img2 = cv2.imread(path+'/img.jpg',0)
-for i in range (img2.shape[0]):
-  for j in range (img2.shape[1]):
-    img2[i][j] = funcion[img2[i][j]]
-
-plt.imshow(img2, cmap='gray', vmin=0, vmax=255)
-'''
-
 arch = open(path+'/img.txt','w')
 for i in img:
   for j in i:
