@@ -19,7 +19,12 @@ Como se puede dar cuenta está imagen esta compuesta por un rectangula blanco y 
 Entonces la suma de A+B con opencv y python:
 ![](https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/4%20Operaciones%20globales%20en%20GPU/Operaciones%20Aritmeticas/imagenes/suma_resultado_py.bmp) 
 
-Se observo que la funcion de opencv equaliza la imágen. Entonces se suma de la manera A+B
+
+
+Se observo que la funcion de opencv equaliza la imágen. Entonces lo sumo A+B con ayuda de numpy.
+
+
 Mientras el de c++ se acerca pero falta sumar pixeles:
+
 ![](https://raw.githubusercontent.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/master/4%20Operaciones%20globales%20en%20GPU/Operaciones%20Aritmeticas/imagenes/Salida_suma.bmp) 
 
