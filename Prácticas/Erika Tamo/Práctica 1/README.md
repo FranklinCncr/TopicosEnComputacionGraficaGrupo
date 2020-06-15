@@ -1,3 +1,5 @@
+**Procesamiento global de imágenes**
+
 **Suma**
 
 Entre Imagenes
