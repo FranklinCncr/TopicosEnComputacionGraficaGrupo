@@ -29,8 +29,8 @@ void Rotar(Mat imagen, Mat& salida, double angulo, double escala = 1)
 int main()
 {
     //////////////Ejercicio1
-    Mat img2, img3, res;
-    Mat img = cv::imread("Entrada/peces.jpg", 1);
+    /*Mat img2, img3, res;
+    Mat img = cv::imread("Entrada/d1.jpg", 1);
     imshow("Original imagen", img);
     resize(img, img2, Size(), 1, 2);
     imshow("Realizar el zoom alarga el ancho", img2);
@@ -39,46 +39,53 @@ int main()
     imshow("Realizar el zoom alarga el alto", img3);
     imwrite("Resultados/zoom/Zoon_alargar_alto.jpg", img3);
 
+    resize(img, img3, Size(), 2, 2);
+    imshow("Realizar el zoom alarga el alto de 2,2", img3);
+    imwrite("Resultados/zoom/Zoon_2_2.jpg", img3);*/
+
     //////////////Ejercicio2
     /*Mat dest;
-    Mat img = cv::imread("Entrada/peces.jpg", 1);
-    imshow("Imagene original", img);
+    Mat img = cv::imread("Entrada/d1.jpg", 1);
+    imshow("Real", img);
     //lo puso de cabeza
     flip(img, dest, 0);//muestra el pesca de manera izquierda
-    imshow("Salida del flip_x", dest);//horizontal
-    imwrite("Resultados/Salida del flip_x_horizontal.jpg", dest);
-
-    flip(img, dest, -1);//muestra el pesca de manera derecha
-    imshow("Salida del flip2_z", dest);//vertical
-    imwrite("Resultados/Salida del flip_z_vertical.jpg", dest);
+    imshow("Eje_x", dest);//horizontal
+    imwrite("Resultados/Espejo/Eje_x.jpg", dest);
 
     flip(img, dest, 1);//muestra el pesca de manera derecha
-    imshow("Salida del flip3_y", dest);//vertical
-    imwrite("Resultados/Salida del flip_y_vertical.jpg", dest);*/
+    imshow("Eje_y", dest);//vertical
+    imwrite("Resultados/Espejo/Eje_y.jpg", dest);
+
+    flip(img, dest, -1);//muestra el pesca de manera derecha
+    imshow("Eje_x_y", dest);//vertical
+    imwrite("Resultados/Espejo/Eje_x_y.jpg", dest);*/
 
     /////////////////Ejercicio 3
     /*Mat salida;
-    Mat img = cv::imread("Entrada/peces.jpg", 1);
+    Mat img = cv::imread("Entrada/d1.jpg", 1);
     Rotar(img, salida, 45);
-    imshow("Rotaryescala45", salida);
-    imwrite("Resultados/Rotaryescala45.jpg", salida);*/
+    imshow("Rotaryescala360", salida);
+    imwrite("Resultados/Rotaryescala360.jpg", salida);*/
 
     /////////////////Ejercicio 4 
+    
     // Inclinar (shear) la imagen img en X en angulo grados y
     //desplazar en X para que se quede centrada
-    /*Mat img = cv::imread("peces.jpg", 1);
-    double inc = tan(3 * M_PI / 180.0);//menor numero no se nota mucho la variacion
+    /*Mat img = cv::imread("Entrada/d1.jpg", 1);
+    double inc = tan(100 * M_PI /100);//menor numero no se nota mucho la variacion
     Mat c = (Mat_<double>(2, 3) << 1, inc, -inc * img.size().height / 2.0, 0, 1, 0);
     warpAffine(img, img, c, img.size());
     imshow("Inclinar e desplaza30r",img );
-    imwrite("Resultados/Inclinar_desplazarcanti_3.jpg", img);*/
+    imwrite("Resultados/Inclinar/A_100_d_100.jpg", img);*/
 
+    //al aumentar la cantidad de desplazamiento tambien se aumenta el angulo para poder centrarse la imagen pero al aumentar mucho puede tambien no notarse nada de la imágen 
+    //Entonces el angulo debe ser igual al desplazamiento
     /////////////////Ejercicio 5
-    /*Mat img = cv::imread("Entrada/peces.jpg", 1);
+    Mat img = cv::imread("Entrada/d1.jpg", 1);
     Mat pt1(1, 3, CV_32FC2); // Puntos en el origen
     pt1.at<Vec2f>(0, 0) = Vec2f(0, 0); // Rellenar los tres puntos
-    pt1.at<Vec2f>(0, 1) = Vec2f(50, 0);
-    pt1.at<Vec2f>(0, 2) = Vec2f(20, 100);
+    pt1.at<Vec2f>(0, 1) = Vec2f(100, 10);
+    pt1.at<Vec2f>(0, 2) = Vec2f(100, 100);
     Mat pt2(1, 3, CV_32FC2); // Puntos en el destino
     pt2.at<Vec2f>(0, 0) = Vec2f(20, 20); // Rellenar los tres puntos
     pt2.at<Vec2f>(0, 1) = Vec2f(80, 40);
@@ -86,7 +93,8 @@ int main()
     Mat c = getAffineTransform(pt1, pt2);
     warpAffine(img, img, c, img.size());
     imshow("Transformación", img);
-    imwrite("Resultados/Transformacion.jpg", img);*/
+    imwrite("Resultados/Transformacion.jpg", img);
+
     waitKey(0);
     return(0);
 }
