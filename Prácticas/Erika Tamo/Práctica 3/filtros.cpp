@@ -83,17 +83,17 @@ int main()
     /////////////////Ejercicio 5
     Mat img = cv::imread("Entrada/d1.jpg", 1);
     Mat pt1(1, 3, CV_32FC2); // Puntos en el origen
-    pt1.at<Vec2f>(0, 0) = Vec2f(0, 0); // Rellenar los tres puntos
-    pt1.at<Vec2f>(0, 1) = Vec2f(100, 10);
-    pt1.at<Vec2f>(0, 2) = Vec2f(100, 100);
+    pt1.at<Vec2f>(0, 0) = Vec2f(139, 12); // Rellenar los tres puntos
+    pt1.at<Vec2f>(0, 1) = Vec2f(121, 27);
+    pt1.at<Vec2f>(0, 2) = Vec2f(148, 29);
     Mat pt2(1, 3, CV_32FC2); // Puntos en el destino
-    pt2.at<Vec2f>(0, 0) = Vec2f(20, 20); // Rellenar los tres puntos
-    pt2.at<Vec2f>(0, 1) = Vec2f(80, 40);
-    pt2.at<Vec2f>(0, 2) = Vec2f(20, 70);
+    pt2.at<Vec2f>(0, 0) = Vec2f(171, 22); // Rellenar los tres puntos
+    pt2.at<Vec2f>(0, 1) = Vec2f(149, 31);
+    pt2.at<Vec2f>(0, 2) = Vec2f(173, 40);
     Mat c = getAffineTransform(pt1, pt2);
     warpAffine(img, img, c, img.size());
     imshow("Transformación", img);
-    imwrite("Resultados/Transformacion.jpg", img);
+    imwrite("Resultados/Transformacion2.jpg", img);
 
     waitKey(0);
     return(0);
