@@ -1,6 +1,6 @@
 Imagen Original:
 
-![](cubo.bmp)
+![](imagen.jpg)
 
 **Ejercicio 1: Zoom x2 de una imagen**
 
@@ -20,4 +20,4 @@ Imagen Original:
 
 **Ejercicio 5: Transformación a fin a una imagen**
 
-![](transformacion.jpg)
+![](tranformacion.jpg)
