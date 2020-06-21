@@ -15,15 +15,15 @@ Imagen de ***entrada***:
 
 Con ello se manejarán los rangos que se necesitan:
 
-Bx manejará el rango [0...h[, será ***blockIdx.x***
+Bx es ***blockIdx.x***, manejará el rango [0...h[
 
-By manejará el rango [0...w[, será ***blockIdx.y***
+By es ***blockIdx.y***, manejará el rango [0...w[
 
-Bz es ***blockId.z*** manejará el rango [0...9[
+Bz es ***blockId.z***, manejará el rango [0...9[
 
-Tx es ***threadIdx.x*** manejará el rango [0...9[
+Tx es ***threadIdx.x***, manejará el rango [0...9[
 
-Ty es ***threadIdx.y*** manejará el rango [0...3[
+Ty es ***threadIdx.y***, manejará el rango [0...3[
 
 Entonces se tendrá:
 
