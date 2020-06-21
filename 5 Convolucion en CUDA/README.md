@@ -30,3 +30,5 @@ Entonces se tendrá:
 * dim3 blocks( h, w, kernelDim ); 
 * dim3 threads( kernelDim, ch );
 * conv <<< blocks,threads >>> (d_imgFR, d_kernel, d_salida, w, h, ch, kernelDim);
+
+## 1D
