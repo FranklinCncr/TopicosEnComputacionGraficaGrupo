@@ -8,3 +8,17 @@ Imagen de ***entrada***:
 ***Difuminación*** con un ***kernel de 9x9***:
 
 ![](https://github.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/blob/master/5%20Convolucion%20en%20CUDA/imagenes/salida.jpg)
+
+### Lanzamiento del kernel
+
+* dim3 blocks( h, w, kernelDim ); 
+* dim3 threads( kernelDim, ch );  
+
+Para lo cual se tiene los rangos que se necesitan:
+
+***blockIdx.x*** manejará el rango [0...h[
+***blockIdx.y*** manejará el rango [0...w[
+blockId.z (0...9]
+// threadIdx.x (0...9]   threadIdx.y (0..3]
+ 
+ conv<<<blocks,threads>>>(d_imgFR, d_kernel, d_salida, w, h, ch, kernelDim);
