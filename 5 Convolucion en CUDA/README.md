@@ -14,11 +14,12 @@ Imagen de ***entrada***:
 * dim3 blocks( h, w, kernelDim ); 
 * dim3 threads( kernelDim, ch );  
 
-Para lo cual se tiene los rangos que se necesitan:
+Con ello se manejarán los rangos que se necesitan:
 
 ***blockIdx.x*** manejará el rango [0...h[
 ***blockIdx.y*** manejará el rango [0...w[
-blockId.z (0...9]
-// threadIdx.x (0...9]   threadIdx.y (0..3]
+***blockId.z*** manejará el rango [0...9[
+***threadIdx.x*** manejará el rango [0...9[
+***threadIdx.y*** manejará el rango [0...3[
  
  conv<<<blocks,threads>>>(d_imgFR, d_kernel, d_salida, w, h, ch, kernelDim);
