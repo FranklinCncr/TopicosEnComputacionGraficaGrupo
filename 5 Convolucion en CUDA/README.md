@@ -17,6 +17,7 @@ Imagen de ***entrada***:
 Con ello se manejarán los rangos que se necesitan:
 
 ***blockIdx.x*** manejará el rango [0...h[
+
 ***blockIdx.y*** manejará el rango [0...w[
 ***blockId.z*** manejará el rango [0...9[
 ***threadIdx.x*** manejará el rango [0...9[
