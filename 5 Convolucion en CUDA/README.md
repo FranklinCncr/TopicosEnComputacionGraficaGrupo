@@ -7,5 +7,4 @@ Imagen de entrada:
 
 Difuminación con un *kernel de 9x9* se tiene:
 
-![]
-(https://github.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/blob/master/5%20Convolucion%20en%20CUDA/imagenes/salida.jpg)
+![](https://github.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/blob/master/5%20Convolucion%20en%20CUDA/imagenes/salida.jpg)
