@@ -19,14 +19,14 @@ Bx es ***blockIdx.x***, manejará el rango [0...h[
 
 By es ***blockIdx.y***, manejará el rango [0...w[
 
-Bz es ***blockId.z***, manejará el rango [0...9[
+Bz es ***blockId.z***, manejará el rango [0...kernelDim[
 
-Tx es ***threadIdx.x***, manejará el rango [0...9[
+Tx es ***threadIdx.x***, manejará el rango [0...kernelDim[
 
-Ty es ***threadIdx.y***, manejará el rango [0...3[
+Ty es ***threadIdx.y***, manejará el rango [0...canales[
 
 Entonces se tendrá:
 
 * dim3 blocks( h, w, kernelDim ); 
-* dim3 threads( kernelDim, ch ); //ch = canales 
-* conv<<<blocks,threads>>>(d_imgFR, d_kernel, d_salida, w, h, ch, kernelDim);
+* dim3 threads( kernelDim, ch );
+* conv <<< blocks,threads >>> (d_imgFR, d_kernel, d_salida, w, h, ch, kernelDim);
