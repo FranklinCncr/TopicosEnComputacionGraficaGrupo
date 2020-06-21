@@ -1,7 +1,7 @@
 # Convolución en CUDA
 ## 2D
 
-Imagen de entrada:
+Imagen de ***entrada***:
 
 ![](https://github.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/blob/master/5%20Convolucion%20en%20CUDA/imagenes/coliseo.jpg)
 
