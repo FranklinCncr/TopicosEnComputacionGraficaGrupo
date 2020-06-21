@@ -15,9 +15,9 @@ Imagen de ***entrada***:
 
 Con ello se manejarán los rangos que se necesitan:
 
-Bx es ***blockIdx.x*** manejará el rango [0...h[
+Bx manejará el rango [0...h[, será ***blockIdx.x***
 
-By es***blockIdx.y*** manejará el rango [0...w[
+By manejará el rango [0...w[, será ***blockIdx.y***
 
 Bz es ***blockId.z*** manejará el rango [0...9[
 
