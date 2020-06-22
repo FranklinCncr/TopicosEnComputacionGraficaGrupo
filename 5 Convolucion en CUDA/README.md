@@ -33,7 +33,7 @@ Entonces se tendrá:
 
 ## 1D
 
-**Difuminación*** con un ***kernel de 9x9***:
+***Difuminación*** con un ***kernel de 9x9***:
 
 ![](https://github.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/blob/master/5%20Convolucion%20en%20CUDA/imagenes/salida1D.jpg)
 
