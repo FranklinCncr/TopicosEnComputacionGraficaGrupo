@@ -43,7 +43,7 @@ Secuencia de proceso:
 
 ![](https://github.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/blob/master/5%20Convolucion%20en%20CUDA/imagenes/estr1D.png)
 
-Con ello se manejarán los rangos que se necesitan:
+Se manejarán los rangos que se necesitan:
 
 Bx es ***blockIdx.x***, manejará el rango [0...h[
 
