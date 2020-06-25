@@ -5,7 +5,6 @@ Imágen de entrada:
 
 
 **1.- Transformación perspectiva**
-Probando con 
 
 ![](https://github.com/FranklinCncr/TopicosEnComputacionGraficaGrupo/blob/master/Pr%C3%A1cticas/Erika%20Tamo/Pr%C3%A1ctica%204/Resultados/Transforma_prespectiva.jpg)
 
