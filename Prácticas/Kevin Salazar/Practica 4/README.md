@@ -1,4 +1,4 @@
-Hora de presentación: 11:58, durante clases
+Hora de presentación: 11:58am, durante clases
 
 # Transformaciones de perspectiva y mapeo
 
