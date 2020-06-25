@@ -1,3 +1,5 @@
+Hora de presentación: 11:58, durante clases
+
 # Transformaciones de perspectiva y mapeo
 
 Imagen de ***entrada***:
